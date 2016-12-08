@@ -31,7 +31,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "GET RENTY" + rentStatement;
+  botResponse = "GET RENTY" + parsed;
 
   options = {
     hostname: 'api.groupme.com',
@@ -84,7 +84,7 @@ function googlePull() {
           var parsed= JSON.parse(body);
           console.log(parsed);
 
-          /*callback ({
+          /*
             name1: data.values[1][0],
             rent1: data.values[1][1],
             name2: data.values[2][0],
