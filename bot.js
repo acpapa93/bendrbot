@@ -67,7 +67,7 @@ function postMessage() {
 exports.respond = respond;
 
 //googleSheetCall.js below///////////
-
+var parsed="";
 function googlePull() {
     HTTPS.get(gUrl, function(res) {
         var body ="";
@@ -81,7 +81,7 @@ function googlePull() {
             body+=d;
           });
         res.on ("end", function() {
-          var parsed= JSON.parse(body);
+          parsed= JSON.parse(body);
           console.log(parsed);
 
           /*
