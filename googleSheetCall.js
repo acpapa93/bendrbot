@@ -11,13 +11,13 @@ var Auth_key = process.env.Auth_Key;
 var name1, rent1, name2, rent2, name3, rent3, name4, rent4, name5, rent5, name6, rent6, name7, rent7, rentStatement = "";
 
 //request parameters
-var options = {
+var gOptions = {
     host: "https://sheets.googleapis.com/v4/spreadsheets/",
     path: Sheet_ID + "/values/I25%3AJ32?majorDimension=ROWS&key=" + Auth_key,
 };
 
-var gReq = function googlePull() {
-    HTTPS.get(options, function(res) {
+function googlePull() {
+    HTTPS.get(gOptions, function(res) {
         console.log("STATUS:" + res.statusCode);
         console.log("HEADERS:" + JSON.stringify(res.headers));
         gReq.on("error", function(e) {
@@ -53,4 +53,4 @@ var gReq = function googlePull() {
             postMessage();
         });
     });
-};
+}
