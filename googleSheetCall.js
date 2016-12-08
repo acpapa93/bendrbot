@@ -16,11 +16,11 @@ var options = {
     path: Sheet_ID + "/values/I25%3AJ32?majorDimension=ROWS&key=" + Auth_key,
 };
 
-var req = function googlePull() {
+var gReq = function googlePull() {
     HTTPS.get(options, function(res) {
         console.log("STATUS:" + res.statusCode);
         console.log("HEADERS:" + JSON.stringify(res.headers));
-        req.on("error", function(e) {
+        gReq.on("error", function(e) {
             console.log("SHIT");
             console.log("error:" + JSON.stringify(e));
         });
