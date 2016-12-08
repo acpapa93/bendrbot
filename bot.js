@@ -1,5 +1,5 @@
 var HTTPS = require('https');
-var googlePull = require("./googleSheetCall.js");
+//var googlePull = require("./googleSheetCall.js");
 var botID = process.env.BOT_ID;
 
 function respond() {
@@ -8,7 +8,8 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    googlePull();
+    //googlePull();
+    postMessage();
     this.res.end();
   } else {
     console.log("don't care");
