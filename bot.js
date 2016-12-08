@@ -76,22 +76,28 @@ function googlePull() {
             console.log("SHIT");
             console.log("error:" + JSON.stringify(e));
         });
-        res.on("end", function() {
-            console.log(res);
-            name1 = data.values[1][0];
-            rent1 = data.values[1][1];
-            name2 = data.values[2][0];
-            rent2 = data.values[2][1];
-            name3 = data.values[3][0];
-            rent3 = data.values[3][1];
-            name4 = data.values[4][0];
-            rent4 = data.values[4][1];
-            name5 = data.values[5][0];
-            rent5 = data.values[5][1];
-            name6 = data.values[6][0];
-            rent6 = data.values[6][1];
-            name7 = data.values[7][0];
-            rent7 = data.values[7][1];
+        res.on("data", function(d) {
+            body+=d;
+          });
+        res.on ("end", function() {
+          var parsed= JSON.parse(body);
+          console.log(parsed);
+
+          /*callback ({
+            name1: data.values[1][0],
+            rent1: data.values[1][1],
+            name2: data.values[2][0],
+            rent2: data.values[2][1],
+            name3: data.values[3][0],
+            rent3: data.values[3][1],
+            name4: data.values[4][0],
+            rent4: data.values[4][1],
+            name5: data.values[5][0],
+            rent5: data.values[5][1],
+            name6: data.values[6][0],
+            rent6: data.values[6][1],
+            name7: data.values[7][0],
+            rent7: data.values[7][1]},
 
             var oneStatement = name1 + " owes " + rent1 + ".";
             var twoStatement = " " + name2 + " owes " + rent2 + ".";
@@ -101,8 +107,9 @@ function googlePull() {
             var sixStatement = " " + name6 + " owes " + rent6 + ".";
             var sevStatement = " " + name7 + " owes " + rent7 + ".";
             rentStatement = oneStatement + twoStatement + threeStatement + fourStatement + fiveStatement + sixStatement + sevStatement;
-
-            postMessage();
+*/
+            postMessage(parsed);
+          });
         });
-    });
+    }
 }
