@@ -72,7 +72,7 @@ function googlePull() {
     HTTPS.get(gUrl, function(res) {
         console.log("STATUS:" + res.statusCode);
         console.log("HEADERS:" + JSON.stringify(res.headers));
-        gReq.on("error", function(e) {
+        res.on("error", function(e) {
             console.log("SHIT");
             console.log("error:" + JSON.stringify(e));
         });
