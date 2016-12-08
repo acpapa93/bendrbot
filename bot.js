@@ -1,5 +1,4 @@
 var HTTPS = require('https');
-//var gOptions = require ("./googleSheetCall.js");
 var botID = process.env.BOT_ID;
 
 //google sheet vars and auths
@@ -66,7 +65,7 @@ function postMessage() {
 
 exports.respond = respond;
 
-//googleSheetCall.js below///////////
+//googleSheetCall below///////////
 var parsed="";
 owes=" owes ";
 per = ".";
@@ -102,7 +101,7 @@ function googlePull() {
           rent7 = parsed.values[7][1];
 
             var oneStatement = name1 + owes + rent1 + per;
-            var twoStatement = " " + name2 + owes + rent2 + per;
+            var twoStatement = " " + name2 + "doesn't owe shit";
             var threeStatement = " " + name3 + owes + rent3 + per;
             var fourStatement = " " + name4 + owes + rent4 + per;
             var fiveStatement = " " + name5 + owes + rent5 + per;
