@@ -12,8 +12,8 @@ var name1, rent1, name2, rent2, name3, rent3, name4, rent4, name5, rent5, name6,
 
 //request parameters
 var options = {
-  host: "https://sheets.googleapis.com/",
-  path: "v4/spreadsheets/" + Sheet_ID + "/values/CurrentMonth!I25%3AJ32?majorDimension=ROWS&key=" + Auth_key,
+  host: "https://sheets.googleapis.com/v4/spreadsheets/",
+  path: Sheet_ID + "/values/I25%3AJ32?majorDimension=ROWS&key=" + Auth_key,
 };
 
 var req = HTTPS.get(options, function (res){
