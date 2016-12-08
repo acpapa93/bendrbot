@@ -70,6 +70,7 @@ exports.respond = respond;
 
 function googlePull() {
     HTTPS.get(gUrl, function(res) {
+        var body ="";
         console.log("STATUS:" + res.statusCode);
         console.log("HEADERS:" + JSON.stringify(res.headers));
         res.on("error", function(e) {
