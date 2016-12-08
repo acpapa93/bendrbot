@@ -77,7 +77,7 @@ function googlePull() {
             console.log("error:" + JSON.stringify(e));
         });
         res.on("end", function() {
-
+            console.log(res);
             name1 = data.values[1][0];
             rent1 = data.values[1][1];
             name2 = data.values[2][0];
