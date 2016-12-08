@@ -1,5 +1,5 @@
 var HTTPS = require('https');
-var googlePull = require("./googleSheetCall.js");
+//var googlePull = require("./googleSheetCall.js");
 var botID = process.env.BOT_ID;
 
 function respond() {
