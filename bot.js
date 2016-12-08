@@ -31,7 +31,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "GET RENTY" + rentStatement;
+  botResponse = "GET RENTY: " + rentStatement;
 
   options = {
     hostname: 'api.groupme.com',
