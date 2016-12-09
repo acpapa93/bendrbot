@@ -75,7 +75,7 @@ function googlePull() {
         console.log("STATUS:" + res.statusCode);
         console.log("HEADERS:" + JSON.stringify(res.headers));
         res.on("error", function(e) {
-            console.log("SHIT");
+            console.log("woof");
             console.log("error:" + JSON.stringify(e));
         });
         res.on("data", function(d) {
