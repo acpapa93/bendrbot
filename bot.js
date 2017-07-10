@@ -85,14 +85,14 @@ function googlePull() {
           parsed= JSON.parse(body);
           console.log(parsed);
 
-          name1 = parsed.values[1][0];
-          rent1 = parsed.values[1][1];
-          name2 = parsed.values[2][0];
-          rent2 = parsed.values[2][1];
-          name3 = parsed.values[3][0];
-          rent3 = parsed.values[3][1];
-          name4 = parsed.values[4][0];
-          rent4 = parsed.values[4][1];
+          name1 = parsed.values[0][0];
+          rent1 = parsed.values[0][1];
+          name2 = parsed.values[1][0];
+          rent2 = parsed.values[1][1];
+          name3 = parsed.values[2][0];
+          rent3 = parsed.values[2][1];
+          name4 = parsed.values[3][0];
+          rent4 = parsed.values[3][1];
 
 
             var oneStatement = name1 + owes + rent1 + per;
